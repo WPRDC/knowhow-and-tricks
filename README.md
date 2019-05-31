@@ -8,3 +8,9 @@ Technical tricks for maintaining servers or whatever
 
 ## Package management
 - Use `python3.7 -m pip` or `./env/bin/python -m pip` to invoke the pip for a particular installation of Python.
+
+## Field-testing
+1) Create field-test branch to hold modified version of ETL job code.
+2) Deploy to testing directory with `git clone -b field-test --single-branch git://sub.domain.com/repo.git`
+3) Set up cron job to run field-test version of ETL job in `test` mode for a week (pushing data to a private CKAN package).
+4) Compare the production and field-test versions of the resulting data tables to verify that the new code is working before pushing to master and deploying changes to production.
