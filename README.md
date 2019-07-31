@@ -1,6 +1,9 @@
 # knowhow-and-tricks
 Technical tricks for maintaining servers or whatever
 
+## CKAN tricks (eventually this can be broken off into its own repository)
+- [Speed up large datastore_search queries](https://ckan.org/2017/08/10/faster-datastore-in-ckan-2-7/) by including the `include_total=False` parameter to skip calculation of the total number rows (which can reduce response time by a factor of 2).  The [datastore_search API call](https://docs.ckan.org/en/ckan-2.7.3/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_search) lets you search a given datastore by column values and return subsets of the records.
+
 ## Server sorcery
 - [Safest way to clean up boot partition - Ubuntu 14.04LTS-x64, Ubuntu 16.04LTS-x64](https://gist.github.com/ipbastola/2760cfc28be62a5ee10036851c654600)
 - [Add new version of Python on Ubuntu 16.04LTS](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/) - Note that it was necessary to run `sudo apt-get update` before finally being able to `sudo apt install python3.7`.
