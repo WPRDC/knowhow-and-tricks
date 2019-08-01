@@ -3,6 +3,7 @@ Technical tricks for maintaining servers or whatever
 
 ## CKAN tricks (eventually this can be broken off into its own repository)
 - [Speed up datastore_search queries](https://ckan.org/2017/08/10/faster-datastore-in-ckan-2-7/) by including the `include_total=False` parameter to skip calculation of the total number rows (which can reduce response time by a factor of 2).  The [datastore_search API call](https://docs.ckan.org/en/ckan-2.7.3/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_search) lets you search a given datastore by column values and return subsets of the records. There's more on benchmarking CKAN performance [here](http://urbanopus.net/benchmarking-the-ckan-datastore-api/).
+- To avoid keeping local databases about datasets, store such information (such as the last time an ETL job was run on a given package) in the 'extras' metadata field of the CKAN package, as much as possible. This stores information in a centralized location so ETL jobs can be run from multiple computers without any other coordination. The extras metadata fields are currently cataloged [here](https://github.com/WPRDC/data-guide/blob/master/docs/metadata_extras.md).
 
 ## Server sorcery
 - [Safest way to clean up boot partition - Ubuntu 14.04LTS-x64, Ubuntu 16.04LTS-x64](https://gist.github.com/ipbastola/2760cfc28be62a5ee10036851c654600)
