@@ -12,6 +12,9 @@ Technical tricks for maintaining servers or whatever
 - [Add new version of Python on Ubuntu 16.04LTS](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/) - Note that it was necessary to run `sudo apt-get update` before finally being able to `sudo apt install python3.7`.
 - Using Python 3.3+'s venv module is [recommended by official documentation](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) for creating virtual environments, but it has issues under Ubuntu. One workaround is to just fall back to using the less limited `virtualenv` option.
 
+## ETL tricks
+- An ETL trick of last resort is screen-scraping a web site. To run such a scraping job in the background, one can a) use Selenium and b) use a headless browser. Here are [some tips on running Chrome headless with Selenium under Python](https://medium.com/@pyzzled/running-headless-chrome-with-selenium-in-python-3f42d1f5ff1d).
+
 ## Package management
 - Use `python3.7 -m pip` or `./env/bin/python -m pip` to invoke the pip for a particular installation of Python.
 
