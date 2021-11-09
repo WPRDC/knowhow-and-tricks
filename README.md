@@ -13,7 +13,7 @@ Technical tricks for maintaining servers or whatever
 - Using Python 3.3+'s venv module is [recommended by official documentation](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) for creating virtual environments, but it has issues under Ubuntu. One workaround is to just fall back to using the less limited `virtualenv` option.
 
 ## ETL tricks
-- An ETL trick of last resort is screen-scraping a web site. To run such a scraping job in the background, one can a) use Selenium and b) use a headless browser. Here are [some tips on running Chrome headless with Selenium under Python](https://medium.com/@pyzzled/running-headless-chrome-with-selenium-in-python-3f42d1f5ff1d).
+- An ETL trick of last resort is screen-scraping a web site. To run such a scraping job in the background, one can a) use Selenium and b) use a headless browser. Here are [some tips on running Chrome headless with Selenium under Python](https://medium.com/@pyzzled/running-headless-chrome-with-selenium-in-python-3f42d1f5ff1d). If you are at all thinking of doing this kind of screen scraping, definitely look into [PhantomJsCloud](https://phantomjscloud.com/) which is a virtual (in-the-cloud) web browser for screen scraping, which should significantly simplify such operations.
 
 ## Package management
 - Use `python3.7 -m pip` or `./env/bin/python -m pip` to invoke the pip for a particular installation of Python.
